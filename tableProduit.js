@@ -30,13 +30,35 @@ let prix = document.getElementById("Prix");
 let qtt = document.getElementById("Qtt");
 let TvaOption = document.getElementById("Tva");
 
+
+// refe to desing
+function updateText(ValueDesing) {
+    // Define an array of references and corresponding designations
+    const references = ["r1", "r2",'r3'];
+    const designations = ["fraise", "Banane",'Lemon'];
+
+    // Get the index of the reference in the array
+    const index = references.indexOf(Refe.value); 
+
+    // Check if the reference is found in the array
+    if (index !== -1) {
+        // If found, update the designation and color
+        Designation.value = designations[index];
+        Designation.style.color = 'black';
+    } else {
+        // If not found, set a default value and color
+        Designation.value = "not defined";
+        Designation.style.color = 'red';
+    }
+}
+
 // Add product into table
 function AddProduct() {
     event.preventDefault()
 
-    if ( Refe.value != "" && Designation.value != ""  && prix.value != "" && qtt.value != ""  && TvaOption.value != "") 
+    if ( Refe.value != "" &&  Designation.value !== "not defined"  && prix.value != "" && qtt.value != ""  && TvaOption.value != "") 
 { 
-     if ( qtt.value <1  ) {
+     if ( qtt.value <1 ) {
         qtt.style.borderColor = "red";
         console.log("qtt doit etre >0");
 
@@ -45,10 +67,10 @@ function AddProduct() {
         prix.style.borderColor = 'transparent';
      } else { 
 
-let PrixOfTotal = parseInt(prix.value);console.log(PrixOfTotal);
-let QttOfTotal = parseInt(qtt.value);console.log(QttOfTotal);
-let TotalOfPrixAndQtr = PrixOfTotal*QttOfTotal ; console.log(TotalOfPrixAndQtr)
-let TvaOfTotal = parseInt(TvaOption.value);console.log(TvaOfTotal) ;
+let PrixOfTotal = parseInt(prix.value);
+let QttOfTotal = parseInt(qtt.value);
+let TotalOfPrixAndQtr = PrixOfTotal*QttOfTotal ;
+let TvaOfTotal = parseInt(TvaOption.value);
 let TvaValue = (TotalOfPrixAndQtr*(TvaOfTotal/100)) ;
 let finalTotal = TotalOfPrixAndQtr+TvaValue;
 
@@ -94,25 +116,25 @@ TvaOption.value = "0%";
 }
 
 
-function updateText(ValueDesing) {
-    // Define an array of references and corresponding designations
-    const references = ["r1", "r2",'r3'];
-    const designations = ["fraise", "Banane",'Lemon'];
+// function updateText(ValueDesing) {
+//     // Define an array of references and corresponding designations
+//     const references = ["r1", "r2",'r3'];
+//     const designations = ["fraise", "Banane",'Lemon'];
 
-    // Get the index of the reference in the array
-    const index = references.indexOf(Refe.value); 
+//     // Get the index of the reference in the array
+//     const index = references.indexOf(Refe.value); 
 
-    // Check if the reference is found in the array
-    if (index !== -1) {
-        // If found, update the designation and color
-        Designation.value = designations[index];
-        Designation.style.color = 'black';
-    } else {
-        // If not found, set a default value and color
-        Designation.value = "not defined";
-        Designation.style.color = 'red';
-    }
-}
+//     // Check if the reference is found in the array
+//     if (index !== -1) {
+//         // If found, update the designation and color
+//         Designation.value = designations[index];
+//         Designation.style.color = 'black';
+//     } else {
+//         // If not found, set a default value and color
+//         Designation.value = "not defined";
+//         Designation.style.color = 'red';
+//     }
+// }
 
 
 // Date d'ajoute

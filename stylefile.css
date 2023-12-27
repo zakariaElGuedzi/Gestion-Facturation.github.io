@@ -160,9 +160,6 @@ select {
     transform: scale(1.05);
 }
 
-
-
-
 /* titreTable */
 .titreListTable {
     display: flex;
@@ -174,6 +171,7 @@ select {
     background: #73af3ec1;
     border-Top-right-radius: 15px;
     border-Top-left-radius: 15px;
+    width: 107%;
 }
 .titreListTable label {
     padding: 10px;
