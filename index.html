@@ -9,6 +9,7 @@
 </head>
 <body id="body" class="BODY">
 
+<div class="notifsucces"><p>Bien ajouter</p></div>
 <header><h3>Gestion de Facturation</h3>
     <div class="DivDarkMode">
     <button onclick="drkMode()" class="DrkMode" id="DrkMod"><i id="iconDarkMode" class="fa-solid fa-sun"></i></button>
@@ -31,7 +32,7 @@
 
             <div>Designation :<input type="text" id="Desig"  oninput="updateText()"></div> 
 
-            <div>Prix :<input type="number" id="Prix" required></div> 
+            <div>Prix.U :<input type="number" id="Prix" required></div> 
 
 
                 <div > 
@@ -42,6 +43,7 @@
                 <option value="0%" class="option">0%</option>
                 <option value="10%">10%</option>
                 <option value="20%">20%</option>
+                <option value="20%">30%</option>
             </select> </div> <br>
 
             <button class="AddProduct1" onclick="AddProduct()">Ajouter le produit</button>
@@ -53,9 +55,10 @@
         <table class="table">
             <thead>
                     <tr class="firstlgn">
+                    <!-- <th>ID Client</th> -->
                     <th>Ref</th>
                     <th>Designation</th>
-                    <th>Prix</th>
+                    <th>Prix.U</th>
                     <th>Quantité</th>
                     <th>TVA</th>
                     <th>Date d'ajoute</th>
@@ -65,9 +68,7 @@
             <tbody id="dataProduct"></tbody>
         </table>
     </div>
-
 </div>
-
 <script src="tableProduit.js" ></script>
 </body>
 </html>

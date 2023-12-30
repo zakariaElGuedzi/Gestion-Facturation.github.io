@@ -83,6 +83,7 @@ dataProduct.innerHTML += `<tr>
     <td>${dateString}</td>
     <td>${finalTotal} Dhs</td>
 </tr>`
+//    // <td><button>-</button></td>  ==>  add button to array
          Refe.style.borderColor = 'transparent';
          Designation.style.borderColor = 'transparent';
          prix.style.borderColor = 'transparent';
@@ -140,3 +141,19 @@ TvaOption.value = "0%";
 // Date d'ajoute
 let currentDate = new Date();
 let dateString = `${currentDate.getUTCDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
+
+
+
+// tirer une facture
+// Ref
+// Designation 
+// Prix 
+// qtt
+// TVA 
+// Date d'ajoute 
+// Total de chiffre 
+// Total des produit (combien de produit)
+// Total de qtt sur le tableau
+// date de dubet - date de fin 
+// date de tirer la formulaire 
+// generateur de QR code

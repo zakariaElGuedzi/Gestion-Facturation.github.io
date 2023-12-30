@@ -220,12 +220,25 @@ select {
     display: none;
     flex-direction: column;
 }
-
-
 /* icon */
 .fa-solid fa-newspaper {
     padding-left: 15px;
 }
-
+/* notifcation */
+.notifsucces {
+    background-color: #b3dd82;
+    color: black;
+    width: 18%;
+    height: 11vh;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 21px;
+    margin-left: 78%;
+    margin-top: -37%;
+    position: absolute;
+    /* display: none; */
+}
 
 
