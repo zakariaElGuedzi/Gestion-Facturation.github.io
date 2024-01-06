@@ -29,7 +29,7 @@ let Designation = document.getElementById("Desig");
 let prix = document.getElementById("Prix");
 let qtt = document.getElementById("Qtt");
 let TvaOption = document.getElementById("Tva");
-
+var arrTest = [];
 
 // refe to desing
 function updateText(ValueDesing) {
@@ -52,6 +52,10 @@ function updateText(ValueDesing) {
     }
 }
 
+
+
+
+
 // Add product into table
 function AddProduct() {
     event.preventDefault()
@@ -64,7 +68,7 @@ function AddProduct() {
 
         Refe.style.borderColor = 'transparent';
         Designation.style.borderColor = 'transparent';
-        prix.style.borderColor = 'transparent';
+        prix.style.borderColor = 'transparent'; 
      } else { 
 
 let PrixOfTotal = parseInt(prix.value);
@@ -73,16 +77,22 @@ let TotalOfPrixAndQtr = PrixOfTotal*QttOfTotal ;
 let TvaOfTotal = parseInt(TvaOption.value);
 let TvaValue = (TotalOfPrixAndQtr*(TvaOfTotal/100)) ;
 let finalTotal = TotalOfPrixAndQtr+TvaValue;
+// let arrTest = [];
 
-dataProduct.innerHTML += `<tr>
-    <td>${Refe.value}</td>
-    <td>${Designation.value}</td>
-    <td>${prix.value}</td> 
-    <td>${qtt.value} p.s</td>
-    <td>${TvaOption.value}</td>
-    <td>${dateString}</td>
-    <td>${finalTotal} Dhs</td>
-</tr>`
+
+arrTest.push(`<tr>
+<td>${Refe.value}</td>
+<td>${Designation.value}</td>
+<td>${prix.value}</td> 
+<td>${qtt.value} p.s</td>
+<td>${TvaOption.value}</td>
+<td>${dateString}</td>
+<td>${finalTotal} Dhs</td>
+</tr>`); console.log(arrTest);
+
+dataProduct.innerHTML += arrTest[arrTest.length-1];
+
+
 //    // <td><button>-</button></td>  ==>  add button to array
          Refe.style.borderColor = 'transparent';
          Designation.style.borderColor = 'transparent';
@@ -115,6 +125,20 @@ TvaOption.value = "0%";
         }
     }
 }
+
+
+function removeElement(){
+    if  (arrTest.length > 0) {
+     arrTest.pop();
+        console.log("sfdg");
+        console.log(arrTest);
+        var dataProduct = document.getElementById("dataProduct");
+        dataProduct.innerHTML += arrTest;
+    } else {
+        return "fdfg"
+    }
+};
+
 
 
 // function updateText(ValueDesing) {
