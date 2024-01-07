@@ -9,7 +9,7 @@
 </head>
 <body id="body" class="BODY">
 
-<div class="notifsucces"><p>Bien ajouter</p></div>
+<!-- <div class="notifsucces"><p>Bien ajouter</p></div> -->
 <header><h3>Gestion de Facturation</h3>
     <div class="DivDarkMode">
     <button onclick="drkMode()" class="DrkMode" id="DrkMod"><i id="iconDarkMode" class="fa-solid fa-sun"></i></button>
@@ -51,7 +51,7 @@
 
     <div class="ListProductTable" id="TableButton"  >
         <div class="titreListTable"><i class="fa-solid fa-newspaper"></i><label>List de Produit</label></div>
-        <table class="table">
+        <table class="table" id="myTable">
             <thead>
                     <tr class="firstlgn">
                     <!-- <th>ID Client</th> -->
@@ -66,9 +66,9 @@
             </thead>
             <tbody id="dataProduct"></tbody>
         </table>
+        <button  onclick="removeElement()">Remove</button>
     </div>
 </div>
-<button  onclick="removeElement()">----</button>
 
 <script src="tableProduit.js" ></script>
 </body>

@@ -132,8 +132,13 @@ function removeElement(){
      arrTest.pop();
         console.log("sfdg");
         console.log(arrTest);
-        var dataProduct = document.getElementById("dataProduct");
-        dataProduct.innerHTML += arrTest;
+        let myTble = document.getElementById('myTable');
+        // var dataProduct = document.getElementById("dataProduct");
+        // dataProduct.innerHTML= arrTest.join('--------------');
+        myTble.deleteRow(-1);
+    
+
+
     } else {
         return "fdfg"
     }
